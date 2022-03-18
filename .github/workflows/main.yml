@@ -2,7 +2,7 @@ name: Issue_Validator
 
 on:
   issues: 
-    types: [opened]
+    types: [opened, locked, unlocked]
     
 jobs:
   build:
@@ -13,4 +13,4 @@ jobs:
         run: echo Hello, world!
       - name: Run a multi-line script
         run: |
-          echo ${{github}}
+          echo toJson(${{github}})
